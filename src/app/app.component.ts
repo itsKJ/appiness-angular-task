@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderService } from './services/order.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
+
+  constructor(private orderService: OrderService) {
+    
+  }
+
+  resetData() {
+    this.orderService.resetData()
+  }
 }

@@ -1,0 +1,100 @@
+<div align="center">
+    <mat-card class="order-details-card">
+        <mat-card-header style="text-align: left;">
+            <mat-card-subtitle>
+                Customer
+            </mat-card-subtitle>
+            <mat-card-title>
+                {{order.customer.name}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item>
+                    Phone : {{order.customer.phone}}
+                </mat-list-item>
+                <mat-list-item>
+                    Address : {{order.customer.address}}
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="order-details-card">
+        <button mat-button (click)="goToOrders()" class="back-button">
+            <mat-icon>
+                keyboard_backspace
+            </mat-icon>
+        </button>
+        <mat-card-header style="text-align: left;">
+            <mat-card-subtitle>
+                Order ID 
+            </mat-card-subtitle>
+            <mat-card-title>
+                {{order.id}} | Status :
+                <span *ngIf="order.status==1">Order Received</span>
+                <span *ngIf="order.status==2">Preparing</span>
+                <span *ngIf="order.status==3">Ready To Serve</span>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <span *ngIf="order.pizzas.length >0">
+                    <mat-list-item>
+                        <mat-card-subtitle>
+                            Pizzas
+                        </mat-card-subtitle>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item *ngFor="let pizza of order.pizzas">
+                        {{pizza.product}} | {{pizza.size}}
+                        <span style="position: absolute; right: 0;">
+                            ₹{{pizza.cost}}/-
+                        </span>
+                    </mat-list-item>
+                </span>
+                <span *ngIf="order.beverages.length > 0">
+                    <mat-list-item>
+                        <mat-card-subtitle>
+                            Beverages
+                        </mat-card-subtitle>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item *ngFor="let beverage of order.beverages">
+                        {{beverage.product}} | {{beverage.size}}
+                        <span style="position: absolute; right: 0;">
+                            ₹{{beverage.cost}}/-
+                        </span>
+                    </mat-list-item>
+                </span>
+                <span>
+                    <mat-list-item>
+                        <mat-card-subtitle>
+                            Burgers
+                        </mat-card-subtitle>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item *ngFor="let burger of order.burgers">
+                        {{burger.product}} | {{burger.size}}
+                        <span style="position: absolute; right: 0;">
+                            ₹{{burger.cost}}/-
+                        </span>
+                    </mat-list-item>
+                </span>
+
+                <mat-divider></mat-divider>
+
+                <mat-list-item>
+                    <span style="font-size: xx-large;">
+                        Total Bill
+                        <span style="position: absolute; right: 0;">
+                            ₹{{getTotal(order)}}/-
+                        </span>
+                    </span>
+                </mat-list-item>
+
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+    <br><br>
+</div>

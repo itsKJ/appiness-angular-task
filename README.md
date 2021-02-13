@@ -1,27 +1,20 @@
-# Task
+Each order is represented by separate card in home page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+The status of each order can be changed by clicking the button present in right top of each order
 
-## Development server
+The details of the order can be viewed by clicking 'view details' button present in each order
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The data can be reset by clicking the reset data button present on the right corner of toolbar and then refreshing the page
 
-## Code scaffolding
+To modify the order details
+    1. Modify the orders.json file and restart the server
+    2. Click reset button preset in toolbar
+    3. Refresh the page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run the application
+    1. execute 'npm update' from the root directory
+    2. execute 'ng serve'
+    3. The application will be available at 'localhost:4200' by default
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Dependencies used:
+    Angular Material

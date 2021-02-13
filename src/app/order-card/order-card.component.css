@@ -1,0 +1,38 @@
+.card {
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.card-header {
+  text-align: left;
+}
+
+.preparing-order {
+  background-color: yellow;
+  color: black;
+}
+
+.ready-order {
+    background-color: rgb(48, 182, 48);
+}
+
+.order-overview {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.order-status {
+  position: absolute;
+  right: -10px;
+  border-radius: 3px;
+}
+
+.order-status>button {
+  width: 130px;
+}
+
+.product-icon {
+  font-size: small;
+  padding-top: 10px;
+  padding-left: 10px;
+}

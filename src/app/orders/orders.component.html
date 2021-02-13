@@ -1,0 +1,7 @@
+<mat-grid-list cols="4" rowHeight="500px">
+    <mat-grid-tile *ngFor="let order of orders">
+        <span style="width: 80%;">
+            <app-order-card [order]='order'></app-order-card>
+        </span>
+    </mat-grid-tile>
+</mat-grid-list>

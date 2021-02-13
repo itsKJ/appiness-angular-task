@@ -1,0 +1,9 @@
+.order-details-card{
+    width: 700px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.back-button{
+    float: left;
+}
